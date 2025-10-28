@@ -173,7 +173,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .bloc4 button:hover {
-  opacity: 50%;
   cursor: pointer;
 }
 footer {
@@ -195,7 +194,6 @@ footer {
   flex-wrap: wrap;
 }
 .partie1 {
-  flex: 1;
   max-width: 35rem;
   display: flex;
   flex-direction: column;
@@ -423,7 +421,6 @@ footer {
   }
   .copy {
      position: absolute;
-    bottom: rem;
     left: 28rem;
     margin-top: 21.5rem;
     text-align: left;
