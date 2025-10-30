@@ -8,6 +8,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: hsl(192, 100%, 9%);
   font-size: 18px;
+  overflow-x: hidden;
 }
 .section1 {
   background-image: url("bg-hero-desktop.svg");
@@ -51,7 +52,6 @@ body {
   font-size: 2.6rem;
   margin-bottom: 1.2rem;
   line-height: 1.2;
-  margin-top: -38rem;
   max-width: 450px;
 }
 .section1_content1 p {
@@ -60,7 +60,7 @@ body {
   max-width: 600px;
   font-size: 1.3rem;
 }
-.button {
+.button{
   background-color: hsl(322, 100%, 66%);
   color: #fff;
   font-weight: 700;
@@ -71,6 +71,7 @@ body {
   transition: 0.3s;
   width: 30%;
 }
+.button:hover{background-color:  hsl(322, 100%, 98%);}
 .try-button:hover .btn-text{color: hsl(322, 100%, 66%);}
 .section1_content2 {
   flex: 1;
@@ -78,15 +79,9 @@ body {
   justify-content: center;
 }
 .mockups {
-  width: 90rem;
+  width: 100%;
   max-width: 750px;
   height: auto;
-  margin-top: -10rem;
-  margin-left: -5rem;
-}
-.section1_content2 {
-  width: 94%;
-  margin-top: -44rem;
 }
 .container {
   display: flex;
@@ -105,7 +100,7 @@ body {
   max-width: 35em;
   text-align: left;
   line-height: 1.8;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 .container .img1 {
   flex: 0 0 45%;
@@ -116,50 +111,55 @@ body {
 }
 .bloc3 {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   margin: 5em;
+  padding: 2.5em;
   border-radius: 20px;
-  padding: 4em;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
 }
 .bloc2 {
   display: flex;
-  border-radius: 20px;
-  padding: 4em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   margin: 5em;
+  padding: 2.5em;
+  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.bloc2, .text1 { 
-  margin-top: 10rem;
-  font-size: 1.1rem;
+  background-color: #fff;
 }
 .text1 p {
-  width: 40rem;
   color: gray;
-}
-.img1 {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-}
-.text1, .bloc3 .text1 {
-  max-width: 35rem;
-  line-height: 1.8;
   font-size: 1.1rem;
+  line-height: 1.8;
 }
-.img, .bloc2 img, .bloc3 img {
-  width: 45rem;
-  margin-left: 30%;
+.bloc2 .text1, .bloc3 .text1 {
+  flex: 1 1 45%;
+  max-width: 35em;
+  text-align: left;
+}
+.bloc2 img, .bloc3 img {
+  flex: 0 0 45%;
+  max-width: 35em;
+  width: 100%;
+  height: auto;
 }
 .bloc4 {
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 3rem 2rem;
-  margin-bottom: -4rem;
+  margin: 0 auto 5rem auto;
   position: relative;
   background-color: white;
   width: 40rem;
-  margin-left: 38rem;
+  top: 10rem;
+  max-width: 90%;
 }
 .bloc4 button {
   color: #fff;
@@ -185,7 +185,7 @@ footer {
 }
 .bottom-logo-img {
   width: 190px;
-  height: 250px;
+  height: 240px;
   margin-bottom: 2rem;
 }
 .footer-content {
@@ -264,18 +264,18 @@ footer {
   border: 2px solid hsl(322, 100%, 66%);
   cursor: pointer;
 }
-.footer-copy {
-  align-self: flex-end;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #ddd;
-}
 .copy {
   margin-top: 15%;
   margin-left: 18%;
 }
+.footer__copy {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Media Queries simplifiées pour maintenir l'apparence 1440px */
 @media (max-width: 1024px) {
-  html, body {
+   html, body {
     overflow-x: hidden;
   }
   .section1 {
@@ -392,7 +392,7 @@ footer {
     text-align: left;
     align-items: center;
   }
-  .bloc4 {
+    .bloc4 {
       width: 50%;
     margin: 2rem auto;
     padding: 2rem 1rem;
@@ -437,28 +437,11 @@ footer {
     margin-left: 14rem;
     order: 2;
 }
+
 }
-  /* MOBILE (768px) */
+
 @media (max-width: 768px) {
-  .section1 {
-    background-image: url("bg-hero-mobile.svg");
-    background-size: cover;
-    background-position: top center;
-    padding-top: 20px;
-    text-align: center;
-  }
-  .section1_header {
-    margin: 0 1.5rem;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  .try-button {
-    width: 8em;
-    padding: 8px;
-    font-size: 0.9em;
-  }
-  .section1_content {
+    .section1_content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -504,7 +487,7 @@ footer {
   text-align: center;
   margin-top: 0.5rem;
 }
-.mockups {
+  .mockups {
   width: 100%;
   height: auto;
   display: block;
@@ -574,15 +557,8 @@ footer {
   margin: 0 auto;
   text-align: center;
 }
-  .bloc4 {
-    width: 85%;
-    margin: 2rem auto;
-    padding: 2rem 1rem;
-  }
-  .bloc4 h2 {
-    font-size: 1.3rem;
-  }
-  .bloc4 button {
+  
+   .bloc4 button {
     width: 80%;
     max-width: 200px;
     font-size: 1rem;
@@ -629,7 +605,6 @@ footer {
   margin-top: 14rem;
   margin-left: -0.3rem;
 }
-
 .copy {
   text-align: center;
   margin-top: 31rem;
@@ -642,8 +617,6 @@ footer {
   margin-top: -2rem;
 }
 }
-
-
 @media (max-width: 375px) {
    html, body {
     overflow-x: hidden;
@@ -654,17 +627,18 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 100vh;
+    min-height: 10vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: space-between; 
   }
 
   .try-button {
-    padding: 8px 18px;
+    padding: px px;
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
   }
 
   .section1_content1 h1 {
@@ -709,7 +683,6 @@ footer {
   height: auto;
   display: block;
 }
-
 .bloc3 .text1 {
   display: flex;
   flex-direction: column; /* empile le titre et le texte */
@@ -789,7 +762,27 @@ footer {
     text-align: center;
     margin: 0 auto 1rem auto;
   }
+   .section1_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .section1_header img {
+    width: 240px;
+  }
 
+  .try-button {
+    padding: 8px 24px;
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #fff;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
   .section1_content1 p {
     font-size: 1rem;
     line-height: 1.5;
